@@ -16,42 +16,94 @@ const lowerCamelCase = 5;
 // типы данных можно разделить на 2 категории: простые типы (Примитивы) и Объекты (Комплексные)
 
 // простые типы: Числа, Строки, Boolean, Null, Undefined, Symbol, BigInt
-const testOne = 2; // числовой тип данных
-const testTwo = 4.8; // числа могут как целые так и дробные
-const testThree = "Roman"; // строка всегда пишется в кавычках
-const testFour = "5"; // число записанное в кавычках - будет строкой
-const testFive = true; // булиновое значение - true/false
-console.log(testSix); // Ошибка типа данных Null (NAN) - ошибка ссылочного типа
+const testOneA = 2; // числовой тип данных
+const testOneB = 4.8; // числа могут как целые так и дробные
+const testOneC = "Roman"; // строка всегда пишется в кавычках
+const testOneD = "5"; // число записанное в кавычках - будет строкой
+const testOneE = true; // булиновое значение - true/false
+console.log(testOneF); // Ошибка типа данных Null (NAN) - ошибка ссылочного типа
 // мы ссылаемся на несуществующую переменную
-const testSeven; // ошибка Undefined - пустое значение
+const testOneG; // ошибка Undefined - пустое значение
 
 // объекты можно разделить на 2 категории: Специальные объекты, Обычные объекты
 // специальные объекты: Массивы, Функции, Объекты даты, Регулярные выражения, Ошибки
 // объект - это структура для хранения данных (свойств объекта)
-const testEight = {
+const testTwo = {
     name: "Roman", // name - свойство (ключ), "Roman" - метод объекта (значение)
     age: 29, // свойство и метод разделяются :
     isMarried: true
 };
-console.log(testEight.name); // через . можем обратиться к свойству объекта
-console.log(testEight["name"]); 
+console.log(testTwo.name); // через . можем обратиться к свойству объекта
+console.log(testTwo["name"]); // возможный, но не желательный вариант обращения
 // массив - это частный случай объекта, а не отдельный тип данных
 // в массиве элементы идут строго по порядку
-const testNineA = ["plum.png", "orange.jpg", 6, "apple.bmp", {}, []];
-console.log(testNineA[2]); // нумерация в ЯП начинается с 0
+const testThreeA = ["plum.png", "orange.jpg", 6, "apple.bmp", {}, []];
+console.log(testThreeA[2]); // нумерация в ЯП начинается с 0
 // ключ в объекте - это свойство, а в массиве - номер
-const testNineB = []; 
-testNineB[0] = "text"; // можно не только получить элемент но и записать его
-testNineB[1] = prompt("Вам есть 18?", ""); // ответ в виде строки запишется в элемент
+const testThreeB = []; 
+testThreeB[0] = "text"; // можно не только получить элемент но и записать его
+testThreeB[1] = prompt("Вам есть 18?", ""); // ответ в виде строки запишется в элемент
 
 
 //ОБЩЕНИЕ С ПОЛЬЗОВАТЕЛЕМ
 // alert, confirm, prompt - модальные команды, будут использованы только в браузере
-const testTenA = alert("Предупреждение");
-const testTenB = confirm("Вы здесь?"); // ответ придёт в булиновом значении
-const testTenC = prompt("Вам есть 18?", ""); // ответ придёт в типе данных - строка
+const testFourA = alert("Предупреждение");
+const testFourB = confirm("Вы здесь?"); // ответ придёт в булиновом значении
+const testFourC = prompt("Вам есть 18?", ""); // ответ придёт в типе данных - строка
 // вся информация полученная от пользователя, будет строкой, независимо как мы её получим
 console.log(typeof(testTenC)); // typeof - оператор проверки типа данных
-const testTenD = +prompt("Вам есть 18?", ""); // оператор + (динамическая типизация)
+const testFourD = +prompt("Вам есть 18?", ""); // оператор + (динамическая типизация)
 console.log(typeof(testTenD)); // получаем результат - числовой тип данных
 console.log(typeof(null)); // ответ будет - object - ошибка в ЯП JS
+
+
+//ИНТЕРПОЛЯЦИЯ
+// интерполяция - позволяет внутри строки вставлять значение переменной
+const testFiveA = "banana";
+console.log("https://someurl.com/" + testFiveA);
+console.log("https://someurl.com/" + testFiveA + "/" + "4"); // код длинный
+// для интерполяции нужны - `` - косые ковычки, бэктики
+console.log(`https://someurl.com/"${testFiveA}/4`); // сократили
+const testFiveB = "Roman";
+alert(`Привет!, ${testFiveB}`);
+
+
+//ОПЕРАТОРЫ
+// основные операторы - это сложение, вычитание, умножение и деление
+// конкатена́ция — операция склеивания объектов линейной структуры
+console.log("arr" + " - object"); // результат будет строка
+console.log(4 + " - object"); // сконкатенировали число и строку
+console.log(4 + +"5"); // +"5" - унарный плюс (использует только один аргумент для своей работы)
+// инкремент и декремент - существуют для укорочение кода
+let incr = 10, // переменные можно задавать через ,
+    decr = 10;
+incr++; // увеличивает значение на 1
+decr--; // уменьшает значение на 1
+++incr; // увеличивает значение на 1
+--decr; // уменьшает значение на 1
+// форма записи, когда оператор стоит спереди - префиксная, сзади - постфиксная
+console.log(incr++); // постфиксная форма при использовании напрямую, сначала возвращает старое значение
+console.log(incr--); // в консоль сначала попадает 10, а затем совершается действие оператора
+// = это присваивание, == это равенство по значению, === равенство по типу данных
+console.log(2*4 == 8); // true - равенство по значению
+console.log(2*4 == "8"); // true - равенство по значению
+console.log(2*4 === "8"); // false - равенство по типу данных
+console.log(2*4 === 8); // true - равенство по типу данных
+// оператор && - и
+const isCheckedA = true,
+      isCloseA = true;
+console.log(isCheckedA && isCloseA); // true - оба аргумента верные
+const isCheckedB = true,
+      isCloseB = false;
+console.log(isCheckedB && isCloseB); // false - один аргумент не правдивый
+// оператор || - или
+const isCheckedC = true,
+      isCloseC = false;
+console.log(isCheckedC || isCloseC); // true - хотя бы один аргумент правдивый
+const isCheckedD = false,
+      isCloseD = false;
+console.log(isCheckedD || isCloseD); // false - ниодин аргумент не правдивый
+// оператор ! - отрицание
+const isCheckedE = false,
+      isCloseE = false;
+console.log(isCheckedE || isCloseE); // true - оператор ! изменил значение аргумента
