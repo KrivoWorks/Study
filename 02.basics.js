@@ -24,7 +24,7 @@ const num = 50;
 
 if (num < 49) {
     console.log("Мало");
-} else if (num > 100) { // else if - если условие не верное, проверим ещё одно условие
+} else if (num > 100) { // else if - если условие не верное, проверяем ещё одно условие
     console.log("Много");
 } else {
     console.log("Ок");
