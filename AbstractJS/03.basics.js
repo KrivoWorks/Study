@@ -55,3 +55,48 @@ function showFirstMessage(text) {
     console.log(numD); // функция начинает поиск внутри себя, если не находит, поднимается на уровень выше
 }
 showFirstMessage("Hello World");
+
+
+
+// Оператор return завершает выполнение текущей функции и возвращает её значение
+function calc(a, b) {
+    return (a + b); // круглые скобки - чтобы сгрупировать это значение
+}
+console.log(calc(4, 7));
+
+// как только функция увидит Retern - она прекратит своё действие
+function calc(a, b) {
+    return (a + b);
+    console.log("Unreachable code"); // Unreachable code - недостижимый код, который никогда не может быть выполнен
+}
+console.log(calc(4, 7));
+
+// пример работы Retern, две команды консоли
+let numC = 10;
+function ret () {
+    let numC = 20;
+    return numC; // retern вернул значение переменной 
+}
+console.log(numC); // команда вывела значение переменной до её возвращения
+const anotherNumC = ret(); // функция вернулась и поместилась а переменную
+console.log(anotherNumC);
+
+
+//КЛАССИФИКАЦИЯ ФУНКЦИЙ
+// function declaration
+// function expression
+// стрелочные функции
+
+// function declaration - создаётся до запуска кода. Её можно вызвать до объявления, в любом месте кода
+function foo() {
+    // код
+} // нет ;
+
+// function expression - создаётся только тогда, когда до неё доходит поток кода
+const logger = function() {
+    console.log("Hello");
+}; // нужна ; - из за создания переменной
+logger();
+
+// стрелочные функции - не имеет своего контекста вызова. Была добавлена в ES6 в 2015 году
+const culcA = (a, b) => (a + b);
