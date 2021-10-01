@@ -5,6 +5,6 @@
 // свойства - вспомогательные значения
 const bananaA = "test";
 console.log(bananaA.length); // .length - свойство
-// свойство никак не вызывается, а просто пишется через точку
+// свойство никак не вызывается (в отличии от метода), а просто пишется через точку
 const bananaB = "test";
 console.log(bananaB.toUpperCase()); // .length - свойство
