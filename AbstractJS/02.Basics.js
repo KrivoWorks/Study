@@ -45,7 +45,7 @@ switch (numB) { // в switch передаём - что будем проверя
     case 100:
         console.log("Неверно");
         break;
-    case 50:
+    case 60:
         console.log("В точку!");
         break;
     default: // действие выполняемое по умолчанию, если ни одно условие не оказалось верным
@@ -66,8 +66,8 @@ while (numC < 75) { // цикл (условия цикла)
 // do - сначала будет произведено действие
 let numD = 80;
 do { 
-    console.log(numC);
-    numC++;
+    console.log(numD);
+    numD++;
 }
 while (numD < 85);
 
