@@ -13,7 +13,7 @@ const options = {
         background: "red"
     }
 }; // в конце объета ;
-console.log(options.name) // обращаемся к ключу через .
+console.log(options.name); // обращаемся к ключу через .
 delete(options.name); // удаление свойства (значения) ключа
 console.log(options);
 
