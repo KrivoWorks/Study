@@ -71,6 +71,35 @@ console.log(clone);
 const oldArray = ["a", "b", "c"];
 const newArray = oldArray.slice(); // .slice - метод позволяющий скопировать старый массив
 
-newArray[1] = "sggwgq"
+newArray[1] = "sggwgq";
 console.log(oldArray);
 console.log(newArray);
+
+// новые стандартны ES6 и ES8
+// .spread - оператор разворота
+const video = ["youtoob", "vimeo", "rutube"],
+      blogs = ["wordpress", "livejournal", "blogger"],
+      internet = [...video, ...blogs, "vk", "facebook"]; // ... - оператор spread
+console.log(internet); // .spread развернул массив в отдельные элементы
+
+// более сложный пример
+function log(a, b ,c) { // функция с тремя аргументами
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+// создаём массив может придти с сервера, в виде данных, например ссылки
+const num = [2, 5, 7]; 
+log(...num); // запускаем функцию, но во внутрь, вместо передачи трёх аргументов,передаём оператор и массив
+
+// оператор .spread разворачивает и объекты
+const array = ["a", "b"];
+const newArrayA = [...array]; // создание поверхностной копии
+
+const q = {
+    one: 1,
+    two: 2
+};
+
+const newObj = {...q}; // создание поверхностной копии объекта
+console.log(newObj);
