@@ -62,16 +62,16 @@ console.log(products.join("; ")); // получаем строку через ;
 
 // .sort - метод сортировки
 const strB = prompt("", "");
-const products = strB.split(", ");
+const productsB = strB.split(", ");
 products.sort();
 console.log(products.join("; "));
 // если будут введены буквы - метод отсортирует элементы в алфавитном порядке
 // у .sort есть особенность, метод сортирует строки, даже если пользователь введёт цифры
 // например элементы 4, 1, 12, 23 отсортирует как - 1, 12, 23, 4
 // добавляем функцию, которая исправляет ситуацию
-const arrC = [2, 3, 4, 6, 8];
+const arrE = [2, 3, 4, 6, 8];
 arrC.sort(compareNum); // функцию не вызываем а просто передаём
-console.log(arrC);
+console.log(arrE);
 
 function compareNum (a, b) { // метод .sort использует один из алгоритмов - "быстрая сортировка"
     return a - b;
