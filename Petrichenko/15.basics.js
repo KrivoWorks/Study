@@ -1,4 +1,4 @@
-"Use strict"
+"Use strict";
 
 // Навигация по DOM дереву
 // если есть задача взять элемент и обратиться к его родителю или к следующему элементу и у них поменять класс
@@ -26,7 +26,7 @@ console.log(document.body.lastChild);
 // каждый из примеров мы отталкивались от родителя, но сейчас отталкнёмся от любого элемента на странице
 // команда которая позволяет получить родителя соседей и детей
 console.log(document.querySelector("#current").parentNode); // в консоль получили наш элемент с классом first
-console.log(document.querySelector("#current").parentNode.parentNode); // чтобы получить родителя, продублируем команду 2 раза
+console.log(document.querySelector("#current").parentNode.parentNode); // чтобы получить родителя, дублируем команду 2 раза
 // в консоль получаем "wrapper"
 
 
@@ -58,6 +58,6 @@ for (let node of document.body.childNodes) {
     if (node.nodeName == "#text") {
         continue;
     }
-    console.log(node)
+    console.log(node);
 }
 // если будет комментарий, мы тоже его получим после перебора, тк он не является текстовой нодой
