@@ -50,5 +50,31 @@ const box = document.querySelector('.box'); // глобальная переме
     box.addEventListener('touchstart', (e) => {
         e.preventDefault();
 
-        console.log('touches');
+        console.log('start');
+        console.log('e.touches');
+    });
+
+// targetTouches - выдаёт список всех пальцев, которые взаимодействуют с этим элементом
+
+const boxB = document.querySelector('.box'); // глобальная переменная
+
+    boxB.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+
+        console.log('start');
+        console.log('e.touches');
+    });
+
+// chengedTouches - список пальцев которые учавствуют в событии
+
+
+
+// пример использования
+const boxC = document.querySelector('.box'); // глобальная переменная
+
+    boxC.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+
+        console.log(e.targetTouches[0].pageX); // [0] - обращаемся к 1 пальцу
+// .pageX - координаты
     });
