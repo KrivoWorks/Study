@@ -33,27 +33,32 @@
     <h2>by Lewis Carroll</h2>
     <h3>THE MILLENNIUM FULCRUM EDITION 3.0</h3>
     <hr> <!-- тег линии -->
-    <h2>Contents</h2>
+    
+    <div class="example"> <!-- созданно для раздела в css позиционирование элементов -->
+        <h2>Contents</h2>
 
-    <!-- атрибуты html тегов - способ модифицировать, указывать предназначение или путь к файлу -->
-    <!-- атрибуты бывают специфические, которые применяются к конкретному тегу или общие -->
-    <!-- order list - нумерованный список -->
-    <nav> <!-- - семантический тег (ниже) -->
-        <ol type="I" start="3"> <!-- в type - римские цифры и start с какого элемента начинается список -->
-            <li id="begin">Down the Rabbit-Hole</li> <!-- li*12 - способ вывести сразу 12 элементов -->
-            <li>The Pool of Tears</li>
-            <li>A Caucus-Race and a Long Tale</li>
-            <li>The Rabbit Sends in a Little Bill</li>
-            <li>Advice from a Caterpillar</li>
-            <li>Pig and Pepper</li>
-            <li>A Mad Tea-Party</li>
-            <li>The Queen’s Croquet-Ground</li>
-            <li>The Mock Turtle’s Story</li>
-            <li>The Lobster Quadrille</li>
-            <li>Who Stole the Tarts?</li>
-            <li>Alice’s Evidence</li>
-        </ol>
-    </nav>
+        <!-- атрибуты html тегов - способ модифицировать, указывать предназначение или путь к файлу -->
+        <!-- атрибуты бывают специфические, которые применяются к конкретному тегу или общие -->
+        <!-- order list - нумерованный список -->
+        
+        <nav> <!-- - семантический тег (ниже) -->
+            <ol type="I" start="3"> <!-- в type - римские цифры -->
+            <!-- и в start передаём с какого элемента начинается список -->
+                <li id="begin">Down the Rabbit-Hole</li> <!-- li*12 - способ вывести сразу 12 элементов -->
+                <li>The Pool of Tears</li>
+                <li>A Caucus-Race and a Long Tale</li>
+                <li>The Rabbit Sends in a Little Bill</li>
+                <li>Advice from a Caterpillar</li>
+                <li>Pig and Pepper</li>
+                <li>A Mad Tea-Party</li>
+                <li>The Queen’s Croquet-Ground</li>
+                <li>The Mock Turtle’s Story</li>
+                <li>The Lobster Quadrille</li>
+                <li>Who Stole the Tarts?</li>
+                <li>Alice’s Evidence</li>
+            </ol>
+        </nav>
+    </div>
 
     <hr>
     <h2 class="chapter">CHAPTER I. Down the Rabbit-Hole</h2>
@@ -113,13 +118,18 @@
 
     <!-- =================================================================== -->
 
-    <div class="box">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dicta similique quas consectetur quaerat velit saepe, voluptas ipsum perferendis consequuntur? Vitae dicta ad facere debitis! Harum voluptatem voluptates reprehenderit sunt!
-    </div>   
-    <!-- если нужно написать текст без смысловой нагрузки, можно в эммете использлватьь Lorem -->
-
-    <div class="box">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat voluptate delectus in optio distinctio nesciunt perspiciatis. Hic nisi, similique aperiam soluta fuga saepe porro! Accusamus voluptatum alias ad magni non.
+    <div class="exampleBox"> <!-- для карточной колоды в css -->
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dicta similique quas consectetur quaerat velit saepe, voluptas ipsum perferendis consequuntur? Vitae dicta ad facere debitis! Harum voluptatem voluptates reprehenderit sunt!
+        </div>   
+        <!-- если нужно написать текст без смысловой нагрузки, можно в эммете использлватьь Lorem -->
+    
+        <div class="box">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat voluptate delectus in optio distinctio nesciunt perspiciatis. Hic nisi, similique aperiam soluta fuga saepe porro! Accusamus voluptatum alias ad magni non.
+        </div>
+        <div class="box red"> <!-- скопируем блок и добавим ему класс -->
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat voluptate delectus in optio distinctio nesciunt perspiciatis. Hic nisi, similique aperiam soluta fuga saepe porro! Accusamus voluptatum alias ad magni non.
+        </div>
     </div>
 </body>
 </html>
