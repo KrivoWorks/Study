@@ -1,0 +1,68 @@
+* { /* сбрасываем у все элементов значения */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto; /* ставим блочный элемент по центру */
+}
+
+.promo {
+    height: 800px; /* ширину из макета не указываем */
+    background: url('../img/bg/main_bg.png') center center/cover no-repeat;
+    /* .. - выйти из папки css */
+    /* center center - выравнивание по оси x о по оси y */
+    /* cover - размер картинки - расиянуть картинку если она не помещается */
+    /* no-repeat - картинка не должна повторяться */
+    /* и если остальные свойства не нужны, ставим ; */
+    /* без / между значенениями - картинки на странице не будет */
+    padding: 39px 0 62px 0; /* задаём отступы сверху и снизу именно через padding */
+}
+
+.logo .logo_img { /* вложенный класс */
+    display: block; /* картинка строчный элемент */
+    margin: 0 auto; /* и просто 'margin 0 auto' не сработает */
+}
+
+.logo .logo_text { /* возьми класс .logo и внути этого класса будет .logo_text */
+    color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 14px;
+}
+
+h1 {
+    margin-top: 53px;
+}
+
+.title {
+    color: #f9bf3b;
+    font-family: 'Roboto - Black';
+    font-size: 41px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2.title { /* нет пробела - возьми заголовок h2 у которого класс .title */
+    margin-top: 30px;
+}
+
+.simple .title_big {
+    color: #fff;
+    font-size: 80px;
+    font-weight: 400;
+    /* line-height: 24px; текст наплывает друг на друга */
+    /* чтобы это исправить и нужно закоментировать line-height */
+    /* его нужно настраивать только когда есть несколько строк текста */
+    /* 24px это значение по умолчания например в photoshop */
+    text-transform: uppercase;
+    text-align: center;
+}
