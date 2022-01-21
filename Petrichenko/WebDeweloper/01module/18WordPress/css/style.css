@@ -11,7 +11,7 @@
 
 .promo {
     height: 800px; /* ширину из макета не указываем */
-    background: url('../img/bg/main_bg.png') center center/cover no-repeat;
+    background: url('../img/bg/main_bg.jpg') center center/cover no-repeat;
     /* .. - выйти из папки css */
     /* center center - выравнивание по оси x о по оси y */
     /* cover - размер картинки - расиянуть картинку если она не помещается */
@@ -65,4 +65,125 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     /* 24px это значение по умолчания например в photoshop */
     text-transform: uppercase;
     text-align: center;
+    margin-top: 21px;
+}
+
+.promo .promo_text {
+    padding: 0 13px; /* паддинг по бокам 13px */
+    margin-top: 23px;
+    /* стараемся унифицировать вёрстку, везде марджины топ или марджин ботом */
+    color: #fff;
+    /* font-family: Roboto; можно закомментировать, поскольку есть 'font-family: 'Roboto-Light';' */
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 28px;
+    font-family: 'Roboto-Light';
+    font-weight: 300;
+    text-align: center;
+}
+
+.promo .promo_text span {
+    color: #f9bf3b;
+    font-family: 'Roboto - Bold';
+    font-weight: 700;
+}
+
+.promo .promo_btn {
+    display: block; /* button это инлайн блок */
+    margin: 0 auto;
+    margin-top: 73px; /* стараемся везде унифицировать марджины */
+    /* идёт после j,otuj марджина */
+    width: 313px;
+    height: 72px;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.18);
+    border: 4px solid rgba(0, 0, 0, 0.23);
+    background-image: linear-gradient(to top, #2798b9 0%, #3ab6da 100%);
+    /* стилизуем текст кнопки */
+    color: #fff;
+    font-family: "Roboto Condensed";
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    cursor: pointer; /* изменение мышки на руку */
+    outline: none; /* убрать синюю обводку при наведении */
+}
+
+.more {
+    margin-top: 73px;
+}
+
+.more .more_text {
+    color: #fff;
+    font-family: 'Roboto - Thin';
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.more .more_img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 13px;
+}
+
+.waiting {
+    height: 604px;
+    background-color: #efefef;
+    padding: 85px 0 75px 0;
+}
+
+.waiting .waiting_header {
+    color: #252525;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.waiting .waiting_divider {
+    width: 217px;
+    height: 4px;
+    background-color: #f9bf3b;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+
+.waiting .waiting_subheader {
+    margin-top: 17px;
+    color: #4a4a4a;
+    font-family: Roboto;
+    font-size: 23px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.waiting .waiting_wrapper {
+    margin-top: 45px;
+}
+
+.waiting .waiting_wrapper .waiting_item {
+    display: inline-block;
+    vertical-align: top; /* прижимаем все элементы к верхнему краю */
+    margin: 0 15px;
+    width: 339px; /* высоту задавать не будем */
+    /* потому-что, если изменится текст, а высота будет жестко задана, текст может вывалиться */
+    text-align: center;
+}
+
+.waiting .waiting_wrapper .waiting_item .waiting_img {
+    width: 100%; /* картинка займёт 100% от ширины родителя */
+    /* если здесь мы зададим высоту картинке, а картинка будет других пропорций, она сплющится */
+}
+
+.waiting .waiting_wrapper .waiting_item .waiting_decsr {
+    margin-top: 33px;
+    color: #4a4a4a;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    /* вырв=авнивание по центру не нужно, тк его применили на уровень выше */
 }
