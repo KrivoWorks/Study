@@ -326,23 +326,33 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     text-transform: uppercase;
 }
 
-.footer {
+footer {
     background-color: #1a1a1a;
     min-height: 166px;
-    padding: 60px 0 70px 0;
+    padding: 61px 0 69px 0;
 }
 
-.footer_link {
+.info {
+    margin: 0 auto;
+    width: 377px;
     color: #888888;
-    font-family: Roboto;
     text-align: center;
+    font-family: Roboto;
     font-size: 15px;
+    text-decoration: none;
+    font-weight: 300;
+    line-height: 21px;
 }
 
-.footer_call {
+footer a {
     color: #888888;
     font-family: Roboto;
-    padding-top: 11px;
-    text-align: center;
     font-size: 15px;
+    text-decoration: none;
+    font-weight: 300;
+    line-height: 21px;
+}
+
+.underlined {
+    text-decoration: underline;
 }
