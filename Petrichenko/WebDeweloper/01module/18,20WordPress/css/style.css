@@ -161,13 +161,19 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
 }
 
 .waiting .waiting_wrapper {
+    display: flex; /* из 19 урока flexbox */
+    /* поскольку ниже убрали margin и вертикальное выравнивание, элементы прижались друг к другу */
+    justify-content: space-between; /* выровнять по главной оси при помо0щи space-between */
+    /* дальше будем использовать flex потому-что инлайн блоки устаревающая технология */
     margin-top: 45px;
 }
 
 .waiting .waiting_wrapper .waiting_item {
-    display: inline-block;
-    vertical-align: top; /* прижимаем все элементы к верхнему краю */
-    margin: 0 15px;
+    /* display: inline-block; убираем, из 19 урока flexbox */
+    /* у родителя задаём flexbox */
+    /* vertical-align: top; прижимаем все элементы к верхнему краю */
+    /* убираем, потому-что назначили flexbox */
+    /* margin: 0 15px; убираем, потому-что назначили flexbox */
     width: 339px; /* высоту задавать не будем */
     /* потому-что, если изменится текст, а высота будет жестко задана, текст может вывалиться */
     text-align: center;
