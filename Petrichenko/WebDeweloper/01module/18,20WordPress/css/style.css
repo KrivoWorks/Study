@@ -5,12 +5,14 @@
 }
 
 .container {
+    position: relative;
+    /* для блока из 20 урока с картинкой на заднем плане */
     width: 1140px;
     margin: 0 auto; /* ставим блочный элемент по центру */
 }
 
 .promo {
-    height: 800px; /* ширину из макета не указываем */
+    min-height: 800px; /* ширину из макета не указываем */
     background: url('../img/bg/main_bg.jpg') center center/cover no-repeat;
     /* .. - выйти из папки css */
     /* center center - выравнивание по оси x о по оси y */
@@ -21,7 +23,7 @@
     padding: 39px 0 62px 0; /* задаём отступы сверху и снизу именно через padding */
 }
 
-.logo .logo_img { /* вложенный класс */
+.logo .logo_img, .surprise .surprise_logo, .end .end_img { /* вложенный класс */
     display: block; /* картинка строчный элемент */
     margin: 0 auto; /* и просто 'margin 0 auto' не сработает */
 }
@@ -88,7 +90,7 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     font-weight: 700;
 }
 
-.promo .promo_btn {
+.promo .promo_btn, .surprise .surprise_btn {
     display: block; /* button это инлайн блок */
     margin: 0 auto;
     margin-top: 73px; /* стараемся везде унифицировать марджины */
@@ -96,6 +98,7 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     width: 313px;
     height: 72px;
     box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
     border: 4px solid rgba(0, 0, 0, 0.23);
     background-image: linear-gradient(to top, #2798b9 0%, #3ab6da 100%);
     /* стилизуем текст кнопки */
@@ -107,6 +110,10 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     text-transform: uppercase;
     cursor: pointer; /* изменение мышки на руку */
     outline: none; /* убрать синюю обводку при наведении */
+}
+.surprise .surprise_btn {
+    margin-top: 50px;
+    border: 4px solid rgb(213, 213, 213);
 }
 
 .more {
@@ -129,12 +136,16 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
 }
 
 .waiting {
-    height: 604px;
+    /* height: 604px; комментируем из 20 урока и меняем на минимальную высоту */
+    min-height: 604px; /* сейчас визуально ничего не поменялось */
+    /* но если увеличим текст в несколько раз, сейчас текст не вывалится а растянется блок */
+    /* вообще очень мало элементов требуют фиксированную высоту */
     background-color: #efefef;
     padding: 85px 0 75px 0;
 }
 
-.waiting .waiting_header {
+.waiting .waiting_header, .finish .finish_header { /* к уроку 20 */
+    /* чтобы документ не разрастался, можно объеденить заголовки через запятую */
     color: #252525;
     font-family: Roboto;
     font-size: 30px;
@@ -142,8 +153,11 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     text-transform: uppercase;
     text-align: center;
 }
+.finish .finish_header {
+    color: #fff;
+}
 
-.waiting .waiting_divider {
+.waiting .waiting_divider, .finish .finish_divider {
     width: 217px;
     height: 4px;
     background-color: #f9bf3b;
@@ -151,13 +165,16 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     margin-top: 18px;
 }
 
-.waiting .waiting_subheader {
+.waiting .waiting_subheader, .end .end_subheader  {
     margin-top: 17px;
     color: #4a4a4a;
     font-family: Roboto;
     font-size: 23px;
     font-weight: 400;
     text-align: center;
+}
+.end .end_subheader {
+    margin-top: 23px;
 }
 
 .waiting .waiting_wrapper {
@@ -192,4 +209,140 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     font-weight: 300;
     line-height: 21px;
     /* вырв=авнивание по центру не нужно, тк его применили на уровень выше */
+}
+
+/* =================================================================== */
+
+/* 20 УРОК */
+/* в 19 уроке был вопрос, что если поменяется текст в будущем у блока флекс, он вывалится */
+
+.optimization {
+    min-height: 550px;
+    padding: 102px 0 107px 0;
+}
+
+.optimization .optimization_header {
+    /* margin-left: 629px; расстояние не верное, тк указано расстояние до края картинки */
+    margin-left: 391px;
+    color: #299cbd;
+    font-family: 'Roboto - Black';
+    font-size: 29px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.optimization .optimization_text {
+    margin-top: 25px;
+    margin-left: 391px;
+    color: #4a4a4a;
+    font-size: 17px;
+    font-family: 'Roboto Light';
+    font-weight: 300;
+}
+
+.optimization .optimization_text span {
+    font-family: 'Roboto - Bold';
+    font-weight: 700;
+}
+
+.optimization .optimization_img {
+    position: absolute; /* родитель класс container */
+    top: -54px;
+    left: -240px;
+    z-index: -1;
+}
+
+.finish {
+    min-height: 447px;
+    padding: 86px 0 79px 0;
+    background: url(../img/bg/second_bg.jpg) center center/cover no-repeat;
+    /* center center - выравние по оси y и по оси x */
+    /* cover no-repeat - на всю ширину и не повторять */
+}
+
+.finish .finish_wrapper {
+    margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finish .finish_wrapper .finish_item {
+    width: 204px;
+}
+
+.finish .finish_wrapper .finish_item .finish_round {
+    display: flex;
+    justify-content: center; /* выравнивание по главной оси */
+    align-items: center; /* выравнивание по поперечной оси */
+    margin: 0 auto; /* выравниваем сами круги по центру */
+    width: 115px;
+    height: 115px;
+    background-color: #b4e2ff;
+    border-radius: 100%;
+    /* теперь задача расположить иконки по центру кругов */
+}
+
+.finish .finish_wrapper .finish_item .finish_descr {
+    margin-top: 25px;
+    text-align: center;
+    color: #efefef;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.surprise {
+    background-color: #efefef;
+    min-height: 628px;
+    padding: 83px 0;
+}
+
+.surprise .surprise_decr {
+    font-size: 30px;
+    line-height: 43px;
+    margin-top: 42px;
+    text-align: center;
+}
+
+.end {
+    padding: 80px 0 67px 0;
+}
+
+.end h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 38px;
+    text-transform: uppercase;
+}
+
+.end .end_time {
+    color: #299cbd;
+    font-size: 34px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Roboto;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    min-height: 166px;
+    padding: 60px 0 70px 0;
+}
+
+.footer_link {
+    color: #888888;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 15px;
+}
+
+.footer_call {
+    color: #888888;
+    font-family: Roboto;
+    padding-top: 11px;
+    text-align: center;
+    font-size: 15px;
 }
