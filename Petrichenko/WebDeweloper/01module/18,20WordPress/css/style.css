@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
 .container {
     position: relative;
     /* для блока из 20 урока с картинкой на заднем плане */
@@ -30,7 +34,6 @@
 
 .logo .logo_text { /* возьми класс .logo и внути этого класса будет .logo_text */
     color: #fff;
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 500;
     line-height: 24px;
@@ -45,9 +48,8 @@ h1 {
 
 .title {
     color: #f9bf3b;
-    font-family: 'Roboto - Black';
     font-size: 41px;
-    font-weight: 400;
+    font-weight: 900;
     line-height: 24px;
     text-transform: uppercase;
     text-align: center;
@@ -60,7 +62,7 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
 .simple .title_big {
     color: #fff;
     font-size: 80px;
-    font-weight: 400;
+    font-weight: 900;
     /* line-height: 24px; текст наплывает друг на друга */
     /* чтобы это исправить и нужно закоментировать line-height */
     /* его нужно настраивать только когда есть несколько строк текста */
@@ -77,16 +79,13 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     color: #fff;
     /* font-family: Roboto; можно закомментировать, поскольку есть 'font-family: 'Roboto-Light';' */
     font-size: 21px;
-    font-weight: 300;
     line-height: 28px;
-    font-family: 'Roboto-Light';
     font-weight: 300;
     text-align: center;
 }
 
 .promo .promo_text span {
     color: #f9bf3b;
-    font-family: 'Roboto - Bold';
     font-weight: 700;
 }
 
@@ -103,7 +102,6 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     background-image: linear-gradient(to top, #2798b9 0%, #3ab6da 100%);
     /* стилизуем текст кнопки */
     color: #fff;
-    font-family: "Roboto Condensed";
     font-size: 21px;
     font-weight: 400;
     line-height: 24px;
@@ -122,7 +120,6 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
 
 .more .more_text {
     color: #fff;
-    font-family: 'Roboto - Thin';
     font-size: 15px;
     font-weight: 400;
     text-transform: uppercase;
@@ -147,7 +144,6 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
 .waiting .waiting_header, .finish .finish_header { /* к уроку 20 */
     /* чтобы документ не разрастался, можно объеденить заголовки через запятую */
     color: #252525;
-    font-family: Roboto;
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
@@ -168,7 +164,6 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
 .waiting .waiting_subheader, .end .end_subheader  {
     margin-top: 17px;
     color: #4a4a4a;
-    font-family: Roboto;
     font-size: 23px;
     font-weight: 400;
     text-align: center;
@@ -204,7 +199,6 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
 .waiting .waiting_wrapper .waiting_item .waiting_decsr {
     margin-top: 33px;
     color: #4a4a4a;
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
     line-height: 21px;
@@ -225,9 +219,8 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     /* margin-left: 629px; расстояние не верное, тк указано расстояние до края картинки */
     margin-left: 391px;
     color: #299cbd;
-    font-family: 'Roboto - Black';
     font-size: 29px;
-    font-weight: 400;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -236,12 +229,10 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     margin-left: 391px;
     color: #4a4a4a;
     font-size: 17px;
-    font-family: 'Roboto Light';
     font-weight: 300;
 }
 
 .optimization .optimization_text span {
-    font-family: 'Roboto - Bold';
     font-weight: 700;
 }
 
@@ -286,9 +277,8 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     margin-top: 25px;
     text-align: center;
     color: #efefef;
-    font-family: Roboto;
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 20px;
 }
 
@@ -320,8 +310,7 @@ h2.title { /* нет пробела - возьми заголовок h2 у ко
     color: #299cbd;
     font-size: 34px;
     text-align: center;
-    font-weight: bold;
-    font-family: Roboto;
+    font-weight: 700;
     margin-top: 30px;
     text-transform: uppercase;
 }
@@ -337,19 +326,17 @@ footer {
     width: 377px;
     color: #888888;
     text-align: center;
-    font-family: Roboto;
     font-size: 15px;
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 21px;
 }
 
 footer a {
     color: #888888;
-    font-family: Roboto;
     font-size: 15px;
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 21px;
 }
 

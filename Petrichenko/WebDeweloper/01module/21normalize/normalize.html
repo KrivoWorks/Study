@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Normalize CSS -->
+    <!-- в каждом браузере есть стили по умолчанию, и одна страница в разных браузерах может отличаться -->
+    <!-- чтобы этого не происходило, нужно сбросить стили -->
+
+    <!-- первым решением был CSS Reset, он скидывает все стили и имеет свои минусы -->
+    <!-- на смену ему пришёл файл normalize.css -->
+    <!-- который не просто скидывал все стили а оптимизировал только те стили, которые необходимо -->
+
+    <!-- normalize.css не нужно подключать только есть библиотека уже с ним -->
+    <!-- если сайт сделан только на CSS и HTML он нужен -->
+    <!-- подключить в проект мы можем его двумя разными способами - локально и удалённо -->
+
+    <!-- локально файл обязательно нужно подключать перед style.css -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- удалённо можно подключить файл с помощью cdn серверов -->
+    <!-- пример - https://cdnjs.com/libraries/normalize -->
+    <!-- normalize.min.css - ужатый, минифицированный файл -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- при таком подключении, файл подключаемый находится на удалённом сервере -->
+    <!-- если рабготать с таким проектом без интернета, такой файл не загрузится -->
+
+</head>
+<body>
+    
+</body>
+</html>
