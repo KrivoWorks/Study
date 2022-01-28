@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- первым файлом подключается reboot -->
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <!-- дальше подключаем сетку с колонками -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <!-- последним файлом всегда подключаем стили -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header> <!-- семантический тег шапки сайта -->
+        <!-- в ней обычно расположен логотип, мепню и всё что относится к шапке сайта -->
+        
+        <!-- первоначальная версия макета -->
+        
+        <!-- <div class="container">
+            <nav>
+                класс .row не используем тк контейнер можно использовать отдельно
+                как в проекте WordPress, контейнером ограничиваем ширину
+                <ul class="menu">
+                    с точки зрения seo продвижения будет правильно создать список
+                    и внутри указать, что внутри списка будут элементы списка, а внутри ссылка
+                    <li class="menu_item"><a href="#" class="menu_link">Главная</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Со своим автомобилем</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">На автомобиле компании</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Требования</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Оставить заявку</a></li>
+                </ul>
+            </nav>
+        </div> -->
+
+        <!-- изменили структуру, для правильного использования семантического тега header -->
+
+        <nav>
+            <div class="container">
+                <ul class="menu">
+                    <li class="menu_item"><a href="#" class="menu_link">Главная</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Со своим автомобилем</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">На автомобиле компании</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Требования</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Оставить заявку</a></li>
+            </div>
+        </nav>
+        <div class="subheader">
+            <div class="container">
+                <div class="row"> <!-- соблюдаем правило, в контейнере - row -->
+                    <div class="col-md-4 offset-md-1"> <!-- col-md-4 класс занимает 4 колонки -->
+                        <!-- offset-md-1 - отступ слева в 1 колонку -->
+                        <!-- в документации bootstrap в разделе Layout - Grid - Offsetting columns -->
+                        <a href="#" class="subheader_logo"><img src="img/Logo.png" alt="Logo"></a>
+                        <!-- для логотипа правильнее помещать картинку в ссылку -->
+                        <div class="subheader_official">Официальный партнёр Uber в Москве</div>
+                    </div>
+    
+                    <div class="col-md-2 offset-md-2">
+                        <div class="subheader_call">Звоните нам ежедневно</div>
+                        <a href="tel:84957970988" class="subheader_phone">8 495 797 09 88</a>
+                        <!-- телефон нужно указывать в ссылке, чтобы со смартфона можно было позвонить -->
+                        <!-- и это дополнительный плюс для seo оптимизации -->
+                    </div>
+    
+                    <div class="col-md-2">
+                        <button class="subheader_btn">Заказать звонок</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="promo">
+        <div class="container">
+            <div class="row"> <!-- задаём весь контент в одной строке -->
+                <div class="col-md-10 offset-md-1">
+                    <!-- h1 дожен быть один на странице и он обязательно должен быть -->
+                    <h1 class="promo_header">КОМПАНИЯ UBER PARTNERS! </h1>
+                    <h2 class="promo_subheader">ПРИГЛАШАЕМ ВОДИТЕЛЕЙ! НА СВОЕМ АВТО!</h2>
+                    <div class="promo_descr">
+                        Компания UBER  динамически развивающаяся. Компания на рынке занимает лидирующее место среди таксомоторных компаний, Компания абсолютно прозрачная вы можете контролировать все процессы у себя в личном кабинете. Бонуcная система.Помимо выполненной работы по заказам, компания начисляет бонусы запиковое время.
+                        <br><br>
+                        Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе Москве.  Водители у нас зарабатывают от 80000- 120000 в месяц.
+                    </div>
+                    <button class="promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

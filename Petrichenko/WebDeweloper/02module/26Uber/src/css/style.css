@@ -1,3 +1,158 @@
 * {
 	font-family: 'Roboto', sans-serif;
 }
+
+header {
+	position: relative; /* для размещения фона, назначаем subheader absolute */
+}
+
+nav { /* так как хедер на странице один, его можно стилизовать с помощью тега */
+	height: 50px;
+	background-color: #212121;
+}
+
+.menu { /* класс .nav растянется на всю ширину контейнера тк это блочный элемент */
+	display: flex; /* выравним в строку все элементы */
+	justify-content: space-between; /* расставим ровно все елементы по главной оси */
+	/* space-between расставляет по центру и элементы прижимает к правой и левой границе */
+	padding: 10px 70px; /* тк в макете есть вертикальные разделители, padding по вертикали 10px */
+	/* их будем делать с помощью бордеров */
+
+	/* но сейчас есть чёерная полоса и текст получается не выровнен вертикально */
+	/* это получается потому-что тест занимает 24Px и паддинги по 10px */
+	/* а высота header задана 50px, исправить это можно двумя способами */
+	/* увеличить line-height и подогнать его вручную, либо более правильно */
+	/* 50 - 24 / 2 = установить вертикальный паддинг в 13px */
+	padding: 13px 70px; /* выровнять с помощью align-items не получится, тк высота блока не доставала */
+
+	margin: 0; /* так как от reboot тянется margin-bottom: 1rem; */
+	/* тк мы указали ul (Unordered List) есть точка перед каждым пунктом меню */
+	list-style-type: none; /* значение по умолчанию - disc, те самые точки, диски */
+}
+
+.menu .menu_link {
+	color: #fff;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.menu .menu_item { /* добавление разделителя */
+	border-right: 2px dotted black;
+	padding-right: 28px;
+}
+
+.subheader {
+	/* чтобы подвинуть фон под меню есть 2 способа */
+	/* 1 - абсолютно спозиционировать блок с фоном */
+	/* 2 - использовать css transform: translateY(-84px) */
+	/* но при использовании второго способа, внизу останется поле в 84px */
+	position: absolute;
+	width: 100%; /* ширина этого блока будет 100% от родителя */
+	height: 84px;
+	background-color: rgba(0,0,0, .6);
+	/* в шаблоне этот блок прозрачный, и редактор предлагает opacity: 0.6 */
+	/* но если так установить, текс внутри блока тоже будет прозрачный - используем альфа канал */
+}
+
+.subheader .subheader_logo {
+	display: block; /* ссылка - это строчный элемент */
+	margin-top: 16px;
+
+	/* если логотип в дальнейшем поменяется на больший */
+	/* чтобы он не вывалиавлся установим максимальную ширину */
+	min-width: 100%; /* 100% от колонки */
+}
+
+.subheader .subheader_official {
+	margin-top: 6px;
+	opacity: 0.5;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 300;
+}
+
+.subheader .subheader_call {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 300;
+	margin-top: 19px;
+	text-align: right;
+}
+
+.subheader .subheader_phone {
+	display: block;
+	margin-top: 8px;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: right;
+	line-height: 12px;
+}
+
+.subheader .subheader_btn {
+	margin-top: 19px;
+	width: 172px;
+	height: 46px;
+	box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+	border: none;
+	background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+	border-radius: 4px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #FFF;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+}
+
+.promo {
+	min-height: 800px;
+	background: url(../img/bg/main_bg.jpg) center center/cover no-repeat;
+	padding: 150px 0 135px 0;
+}
+
+.promo .promo_header {
+	color: #fff;
+	font-size: 60px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 60px; /* чтобы перебить стандартные значения */
+	margin: 0;
+	text-align: center;
+}
+
+.promo .promo_subheader {
+	color: #fff;
+	font-size: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 36px; /* чтобы перебить стандартные значения */
+	margin: 0;
+	margin-top: 22px;
+	text-align: center;
+}
+
+.promo .promo_descr {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	margin-top: 23px;
+	text-align: center;
+}
+
+.promo .promo_btn {
+	/* кнопка это инлайн блок, чтобы поставить её по центру зададим display */
+	display: block;
+	margin: 118px auto 0 auto;
+	width: 259px;
+	height: 63px;
+	background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+	box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
+	border: none;
+	border-radius: 4px;
+	font-weight: normal;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #FFF;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+}
