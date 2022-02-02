@@ -32,21 +32,3 @@
 /* меняем 'fonts/icomoon.eot?kri6es' на '../fonts/icomoon.eot?kri6es' */
 
 /* каждая иконка создаётся при помощи псевдоэлемента ::before */
-.icon-github:before {
-	content: "\e900";
-  }
-
-.icon-instagram:before {
-	content: "\e901";
-	color: #e4405f;
-  }
-
-.icon-paypal:before {
-	content: "\e902";
-	color: #00457c;
-  }
-
-.icon-toggl:before {
-	content: "\e903";
-	color: #e01b22;
-  }
