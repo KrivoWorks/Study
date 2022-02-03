@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="box col">1</div>
+			<div class="box col">2</div>
+			<div class="box col">3</div>
+			<!-- при указании класса col, все три колонки расположились вряд -->
+			<!-- в инспекторе включим режим адаптивности, и начнём уменьшать ширину -->
+			<!-- все 3 колонки начнут сужаться -->
+			<!-- класс col используется чтобы не указывать сколько колонок использовать -->
+			<!-- весь контент внутри строки разделится на 3 области -->
+			<!-- будет 4 - разделится на 4 -->
+			<!-- чаще всего в реальных проектах она нам не подходит -->
+
+			<!-- в документации указано, что можно адаптировать под различные устройства -->
+			<!-- extra small < 576px .col -->
+			<!-- small >= 576px .col-sm -->
+			<!-- medium >= 768px .col-md -->
+			<!-- Large >= 992px .col-lg -->
+			<!-- Extra large >= 1200px .col-xl -->
+			
+			<!-- и под каждое это расширение есть определённый тип колонок -->
+			<!-- разделение на колонки работает по восходящей -->
+			<!-- если контент в col (Extra small) делится на 4 колонки -->
+			<!-- он будет делиться на 4 колонкт и всех расширениях выше -->
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="box col-4">col-4</div>
+			<div class="box col-4">col-4</div>
+			<div class="box col-4">col-4</div>
+			<!-- укажем класс .col-4 - ничего не поменяется -->
+			<!-- тк 12 колонок разделится на 4 -->
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="box col-3">col-3</div>
+			<div class="box col-3">col-3</div>
+			<div class="box col-3">col-3</div>
+			<!-- сейчас 12 колонок разделились на 3 и одно колонка осталась пустая -->
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="box col-12">col-12</div>
+			<div class="box col-12">col-12</div>
+			<div class="box col-12">col-12</div>
+			<!-- так используется расположение колонок на мобильных устройствах -->
+			<!-- но на широких экранах, это выгялит плохо -->
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="box col-12 col-sm-6">box col-12 col-sm-6</div>
+			<div class="box col-12 col-sm-6">box col-12 col-sm-6</div>
+			<div class="box col-12 col-sm-6">box col-12 col-sm-6</div>
+			<!-- сейчас на устройствах меньше 576px контент располагается на всю ширину -->
+			<!-- если размер экрана больше, он располгается в два ряда по 6 колонок -->
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="box col-12 col-sm-6 col-sm-8">box col-12 col-sm-6 col-sm-8</div>
+			<div class="box col-12 col-sm-6 col-sm-8">box col-12 col-sm-6 col-sm-8</div>
+			<div class="box col-12 col-sm-6 col-sm-8">box col-12 col-sm-6 col-sm-8</div>
+			<!-- на практике больше 2 классов не прописыается, это для примера -->
+			<!-- сейчас на устройствах меньше 576px контент располагается на всю ширину -->
+			<!-- если размер экрана больше 576 и меньше 768, он располгается в три ряда -->
+			<!-- если размер экрана больше 768, он располгается в 8 колонок -->
+		</div>
+	</div>
+
+	<!-- =================================================================== -->
+
+	<!-- с помощью bootstrap можно выравнивать колонки по вертикали и по горизонтали -->
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="box col">col-4</div>
+			<div class="box col">col-4</div>
+			<div class="box col">col-4</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="box col-4">justify-content-center</div>
+			<div class="box col-4">justify-content-center</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="box col">First</div>
+			<div class="box col order-1">Second</div>
+			<div class="box col order-12">Third</div>
+		</div>
+	</div>
+	
+</body>
+</html>
