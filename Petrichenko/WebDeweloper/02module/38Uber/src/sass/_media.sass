@@ -25,3 +25,34 @@
 			width: 300px
 			// сейчас ничего не изменилось, тк при экспорте из css случилось наследование классов
 			// в файле _general переформатируем .reasons
+	.mobile
+		&_item
+			width: 300px
+			&_subtitle
+				font-size: 22px
+
+@media (max-width: 991px)
+	// было 992px, в bootstrap перескакивает колонка на >= 992px
+	// иногда могут конфликтовать размер колонок и размер в css
+	.menu
+		&_item
+			padding-right: 8px
+		&_link
+			font-size: 10px
+	.subheader
+		&_logo
+			img
+				width: 100%
+		&_official
+			font-size: 11px
+		&_phone
+			font-size: 18px
+		&_btn
+			margin-top: 21px
+			height: 40px
+			width: 100%
+	.promo
+		&_header
+			font-size: 40px
+		&_subheader
+			font-size: 30px
