@@ -66,3 +66,30 @@
 		&_descr
 			width: 300px
 			margin-top: 20px
+
+@media (max-width: 767px)
+	// делаем гамбургер
+	.menu
+		position: fixed
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		top: 0
+		left: -100%
+		// прям меню за полем видимости
+		width: 50%
+		height: 100vh
+		// 100% видимого пространства
+		padding: 20px 15px
+		background-color: rgba(0,0,0, 0.8)
+		transition: 0.6s all
+		// плавность появления меню
+		&_active
+			// класс активности
+			left: 0
+		&_item
+			padding-right: 0
+			border: none
+			margin-top: 10px
+		&_link
+			font-size: 20px
