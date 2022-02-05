@@ -1,0 +1,95 @@
+// Файл для всех медиастилей
+// название файла начинается с нижнего подчёркивания
+// отдельные кусочки файла будем импортировать в style.sass
+// а компилятор компилирует все файлы в папке sass
+// и для того, чтобы этот файл не компилировался, прописываем _
+
+// также _ говорит другим разработчикам, что файл будет импортироваться
+
+@media (max-width: 1200px)
+	// большинство сайтов нуждается в адоптации именно после 1200px
+	// к тому же мы используем bootstrap а там есть контейнер
+	// который ограничивает ширину контента в 1140px
+	.menu
+		&_item
+			padding-right: 20px
+		&_link
+			font-size: 13px
+	.promo
+		&_header
+			font-size: 50px
+	.reasons
+		&_block
+			align-items: flex-start
+		&_descr
+			width: 300px
+			// сейчас ничего не изменилось, тк при экспорте из css случилось наследование классов
+			// в файле _general переформатируем .reasons
+	.mobile
+		&_item
+			width: 300px
+			&_subtitle
+				font-size: 22px
+
+@media (max-width: 991px)
+	// было 992px, в bootstrap перескакивает колонка на >= 992px
+	// иногда могут конфликтовать размер колонок и размер в css
+	.menu
+		&_item
+			padding-right: 8px
+		&_link
+			font-size: 10px
+	.subheader
+		&_logo
+			img
+				width: 100%
+		&_official
+			font-size: 11px
+		&_phone
+			font-size: 18px
+		&_btn
+			margin-top: 21px
+			height: 40px
+			width: 100%
+	.promo
+		&_header
+			font-size: 40px
+		&_subheader
+			font-size: 30px
+	.reasons
+		&_block
+			flex-direction: column
+			// flex-direction - направление основной оси
+			// зададим column чтобы картинка располагалась над текстом
+			align-items: center
+			// выравним картинку по центру
+		&_descr
+			width: 300px
+			margin-top: 20px
+
+@media (max-width: 767px)
+	// делаем гамбургер
+	.menu
+		position: fixed
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		top: 0
+		left: -100%
+		// прям меню за полем видимости
+		width: 50%
+		height: 100vh
+		// 100% видимого пространства
+		padding: 20px 15px
+		background-color: rgba(0,0,0, 0.8)
+		transition: 0.6s all
+		// плавность появления меню
+		&_active
+			// класс активности
+			left: 0
+		&_item
+			padding-right: 0
+			border: none
+			margin-top: 10px
+		&_link
+			font-size: 20px
