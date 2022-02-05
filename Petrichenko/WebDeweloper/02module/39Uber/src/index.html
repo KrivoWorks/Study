@@ -25,25 +25,37 @@
                     <li class="menu_item"><a href="#" class="menu_link">Требования</a></li>
                     <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
                     <li class="menu_item"><a href="#" class="menu_link">Оставить заявку</a></li>
+            </div>]
+            <!-- создаём гамбургер -->
+            <!-- он располагается вне контейнера -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
         <div class="subheader">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 offset-md-1">
+                    <div class="col-6 col-md-4 offset-md-1">
+                        <!-- добавили col-6 - на самых маленьких экранах будет занимать 6 колонок -->
                         <a href="#" class="subheader_logo"><img src="img/Logo.png" alt="Logo"></a>
                         <div class="subheader_official">Официальный партнёр Uber в Москве</div>
                     </div>
     
-                    <div class="col-md-3 offset-md-1 col-xl-2 offset-xl-2">
-                    <!-- добавили 2 класса xl -->
-                    <!-- и изменили col-md-2 на col-md-3 а отступ с offset-md-2 на offset-md-1-->
+                    <div class="xs-hidden col-md-3 offset-md-1 col-xl-2 offset-xl-2">
+                        <!-- добавили xs-hiden - на самых маленьких экранах будет скрыт -->
+                        <!-- добавили 2 класса xl -->
+                        <!-- и изменили col-md-2 на col-md-3 а отступ с offset-md-2 на offset-md-1-->
                         <div class="subheader_call">Звоните нам ежедневно</div>
                         <a href="tel:84957970988" class="subheader_phone">8 495 797 09 88</a>
                     </div>
     
-                    <div class="col-md-3 col-lg-2">
-                        <!-- изменили col-md-2, тк была одна свободная колонка -->
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <!-- добавили col-6 - на самых маленьких экранах будет занимать 6 колонок -->
+                        <!-- добавили класс xs-visible -->
+                        <a href="tel:84957970988" class="xs-visible subheader_phone">8 495 797 09 88</a>
+                        <!-- добавили в блок к кнопке для правильного отображения -->
                         <button class="subheader_btn">Заказать звонок</button>
                     </div>
                 </div>
@@ -339,7 +351,7 @@
         </div>
     </section>
 
-    <footer>
+    <!-- <footer>
         <div class="footer_devider"></div>
         
         <div class="footer_wrapper">
@@ -384,7 +396,8 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
+    <script src="js/script.js"></script>
 </body>
 </html>
