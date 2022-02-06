@@ -6,7 +6,7 @@
 
 // также _ говорит другим разработчикам, что файл будет импортироваться
 
-@media (max-width: 1200px)
+@media (max-width: 1200px) // Extra large >= 1200px .col-xl
 	// большинство сайтов нуждается в адоптации именно после 1200px
 	// к тому же мы используем bootstrap а там есть контейнер
 	// который ограничивает ширину контента в 1140px
@@ -31,7 +31,7 @@
 			&_subtitle
 				font-size: 22px
 
-@media (max-width: 991px)
+@media (max-width: 991px) // Large >= 992px .col-lg
 	// было 992px, в bootstrap перескакивает колонка на >= 992px
 	// иногда могут конфликтовать размер колонок и размер в css
 	.menu
@@ -68,8 +68,12 @@
 		&_descr
 			width: 300px
 			margin-top: 20px
+	.mobile
+		&_item
+			&_subtitle
+				font-size: 18px
 
-@media (max-width: 767px)
+@media (max-width: 767px) // medium >= 768px .col-md
 	// делаем гамбургер
 	.menu
 		position: fixed
@@ -149,8 +153,20 @@
 		&_header
 			font-size: 40px
 			line-height: 45px
+	.mobile
+		.title
+			font-size: 26px
+			margin-top: 24px
+		.subtitle
+			font-size: 17px
+	.choice
+		min-height: 800px
+		.title
+			font-size: 30px
+	.require
+		padding: 40px 0
 
-@media (max-width: 575px)
+@media (max-width: 575px) // small >= 576px .col-sm
 	nav
 		height: 30px
 	header
@@ -210,3 +226,31 @@
 		font-size: 16px
 		margin-top: 15px
 		line-height: 16px
+
+	.mobile
+		padding: 28px 0 43px 0
+		&_item
+			width: 100%
+			&_subtitle
+				margin: 0 auto
+				width: 80%
+		.title
+			font-size: 16px
+			margin-top: 24px
+		.subtitle
+			font-size: 14px
+	.choice
+		min-height: 800px
+		padding: 25px 0 10px 0
+		.title
+			display: none
+		.subtitle
+			display: none
+		img
+			margin-top: 66px
+		&_descr
+			color: #fff
+			font-style: 17px
+			line-height: 24px
+	.world
+		min-height: 600px
