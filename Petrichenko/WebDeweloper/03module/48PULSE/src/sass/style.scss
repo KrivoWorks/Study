@@ -7,6 +7,9 @@
 	max-width: 950px; /* весь макет определённой ширины */
 	margin: 0 auto; /* выраниваем по центру */
 }
+
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';
+
+@import 'base/media';
