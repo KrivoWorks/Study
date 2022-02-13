@@ -1,0 +1,37 @@
+// каждый блок по бему стилизуется отдельно и подключается в style.scss
+.header {
+	display: flex; /* для выравнивания всех элементов */
+	justify-content: space-between;
+	align-items: center; /* вертикальное выранивание */
+	&__logo { /* для возможного изменения логотипа */
+		width: 250px; /* максимальная ширина любого изображения */
+		img {
+			width: 100%; /* любая картинка логотипа будет занимать 100% ширины */
+		}
+	}
+	&__official {
+		color: #fff;
+		font-size: 12px;
+		font-weight: 400;
+		text-align: center;
+		span {
+			display: block;
+			font-size: 18px;
+		}
+	}
+	&__phone {
+		display: block;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 700;
+		&:hover { /* убираем стиль при наведении */
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+	&__contacts {
+		display: flex; /* задаём флекс */
+		flex-direction: column; /* изменяем направляющую со строки на колонку */
+		align-items: flex-end; /* выравнили по заднему краю */
+	}
+}
