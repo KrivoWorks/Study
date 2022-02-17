@@ -101,5 +101,23 @@
 	.title {
 		padding: 0 15px;
 		font-size: 24px;
+		&_left {
+			padding: 0;
+			line-height: 30px;
+		}
+	}
+
+	.consultation {
+		padding: 50px 0;
+		min-height: 600px;
+		&__descr {
+			margin-top: 15px;
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	.feed-form {
+		width: 100%;
 	}
 }
