@@ -7,6 +7,8 @@
 	<title>Pulse</title>
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<!-- поключаем скаченный файл slick.css перед стилями -->
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -113,9 +115,32 @@
 	</section>
 
 	<section class="carousel"> <!-- html5 стандаррт -->
-
+		<!-- на сайте https://kenwheeler.github.io/slick/ скачиваем архив -->
+		<!-- перемещаем slick.css в папку css и slick.min.js в папку js -->
+		<!-- в шапке подключаем slick.css перед style.min.css -->
+		<!-- перед script.js подключаем бибилиотеку jquery -->
+		<!-- перед script.js подключаем файл с самим слайдером -->
+		<!-- в script.js нужно прописать конструкцию которая будет работать со слайдером -->
+		<div class="carousel__inner">
+			<div>
+				<Img src="img/slides/slide_1.jpg" alt="slide"></Img>
+			</div>
+			<div>
+				<Img src="img/slides/slide_2.jpg" alt="slide"></Img>
+			</div>
+			<div>
+				<Img src="img/slides/slide_3.jpg" alt="slide"></Img>
+			</div>
+		</div>
 	</section>
 
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<!-- подключаем бибилиотеку jquery -->
+	<script src="js/slick.min.js"></script>
+	<!-- подключаем файл скрипта сомого слайдера -->
+	<!-- важна правильная последовательность подключения -->
+	<!-- сначала подключаются библиотеки, затем сам слайдер -->
 	<script src="js/script.js"></script>
 </body>
 </html>
