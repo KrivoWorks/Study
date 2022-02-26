@@ -41,6 +41,8 @@
     }
     .slick-dots li button { // button - кнопка с номером
         // её скрываем и меняем на картинку
+        font-size: 0;
+        line-height: 0;
         display: block;
         width: 20px;
         height: 20px;
