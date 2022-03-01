@@ -158,4 +158,8 @@ $(document).ready(function(){
     valifateForms('#consultation-form');
     valifateForms('#consultation form');
     valifateForms('#order form');
+
+    // маска ввода телефона
+    $('input[name=phone]').mask('+7 (999) 999-9999');
+    // работать не будет, тк в форме атрибут type="number", убираем его
 });
