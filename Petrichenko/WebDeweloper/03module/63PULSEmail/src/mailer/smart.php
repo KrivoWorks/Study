@@ -23,6 +23,10 @@ $mail->Username = 'krivo-test@mail.ru';                  // Наш логин
 $mail->Password = 'k5DgNTyrRS0gwPAGG4Ca';                  // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';             // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                     // TCP port to connect to
+
+// krivo-test@mail.ru
+// Fyyf1970
+// k5DgNTyrRS0gwPAGG4Ca - специальный пароль
  
 $mail->setFrom('krivo-test@mail.ru', 'Pulse');   								// От кого письмо 
 $mail->addAddress('paheb76686@toudrum.com');     									// Add a recipient
