@@ -1,0 +1,25 @@
+// в этот файл собираем и подключаем все файлы стилей
+@import 'base/variables';
+* {
+	font-family: 'Museo Sans Cyrl', sans-serif;
+}
+.container {
+	max-width: 950px; /* весь макет определённой ширины */
+	margin: 0 auto; /* выраниваем по центру */
+}
+
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/buttons';
+@import 'blocks/advantages';
+@import 'blocks/_titles';
+@import 'blocks/consultation';
+@import 'blocks/forms';
+@import 'blocks/carousel';
+@import 'blocks/catalogs';
+@import 'blocks/feedback';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/pageup';
+
+@import 'base/media';
