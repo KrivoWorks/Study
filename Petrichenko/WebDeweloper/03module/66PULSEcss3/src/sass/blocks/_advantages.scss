@@ -1,0 +1,51 @@
+.advantages {
+	background-color: #F6F6F6;
+	padding: 73px 0 65px 0;
+	&__wrapper {
+		margin-top: 60px;
+		display: flex;
+    	justify-content: space-between;
+	}
+	&__item {
+		width: 277px;
+		padding-right: 15px;
+		&:last-child {
+			padding-right: 0;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 70px;
+		}
+	}
+	&__subtitle {
+		margin-top: 37px;
+		font-size: 18px;
+		font-weight: 700;
+		text-align: center;
+	}
+	&__descr {
+		margin-top: 23px;
+		font-size: 14px;
+		font-weight: 300;
+		text-align: center;
+		a {
+            color: #ff0000;
+            text-decoration: underline;
+        }
+	}
+	&__icon {
+		// свойство анимация как и background комбинированное свойство
+		// минимальны 2 парамента - название и длительность
+		&_animated {
+			animation: heartBeat 1.7s ease infinite;
+			// animation-name: heartbeat название анимации
+			// animation-duration: 1.7s; время анимации
+			// animation-timing-function: ease;
+			// animation-iteration-count: infinite; бесконечная анимация
+			&:hover {
+				animation-play-state: paused;
+			}
+		}
+	}
+}
