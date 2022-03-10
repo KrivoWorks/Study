@@ -4,7 +4,7 @@ const gulp = require('gulp'),
 	  cleanCSS = require('gulp-clean-css'),
 	  autoprefixer = require('gulp-autoprefixer'),
 	  rename = require("gulp-rename"),
-      imagemin = require('gulp-imagemin'),
+      imagemin = require('gulp-imagemin'),  // npm i gulp-imagemin@7.1.0
       htmlmin = require('gulp-htmlmin');
 
 gulp.task('server', function() {
