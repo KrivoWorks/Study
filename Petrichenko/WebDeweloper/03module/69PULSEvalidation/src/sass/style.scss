@@ -1,4 +1,12 @@
 // в этот файл собираем и подключаем все файлы стилей
+
+// все перемещённые и переименованные файлы scss нужно подключить
+// чтобы в index.html подключался только один файл стилей
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/_font';
+@import 'libs/slick';
+@import 'libs/animate';
+
 @import 'base/variables';
 @import 'base/animations';
 * {
@@ -13,7 +21,7 @@
 @import 'blocks/header';
 @import 'blocks/buttons';
 @import 'blocks/advantages';
-@import 'blocks/_titles';
+@import 'blocks/titles';
 @import 'blocks/consultation';
 @import 'blocks/forms';
 @import 'blocks/carousel';
