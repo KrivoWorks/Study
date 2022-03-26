@@ -2,35 +2,35 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', san-serif;
 }
 
-/* Единицы измерения Fr */
+/* Явные и неявные Grid */
 
 .grid-container {
-    width: 600px;
-    height: 600px;
-    /* если убрать высоту или ширину, регулироться через fr не будет */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* все колонки займут ровно по трети */
-    grid-template-columns: 1fr 2fr 1fr;
-    /* средняя колонка будет занимать 50% ширины контейнера */
-    grid-template-rows: 1fr 1fr 1fr;
+    width: 1140px;
+    margin: 82px auto 0 auto;
+    grid-template-columns: repeat(4, 240px);
+    grid-template-rows: repeat(2, 260px);
+    /* заданные сетки это явные гриды */
+    /* всё остальное это неявная сетка - неявные гриды */
+    /* браузер создаёт её полностью автоматически */
 
-    /* чтобы не указывать много раз одно и тоже значение, есть repeat */
-    grid-template-columns: repeat(3, 1fr);
-    /* repeat (сколько раз повторить, что повторить) */
-    /* grid-template-columns: repeat(3, 50px 1fr) 20px; */
-    /* 3 раза повторятся колонки сначала 50px, потом 1fr, после них 1 колонка 20px */
+    /* зададим поведение неявных гридов */
+    /* неявный грид будет расти всегда вниз, будут добавляться строки */
+    grid-auto-rows: 260px;
+    /* grid-auto-columns: 240px; сейчас ничего не будет, тк сетка растёт только вниз */
+    gap: 60px;
 }
 
-.grid-elem {
-    /* height: 50px; */
-    background-color: rgba(1, 1, 96, 1);
-    color: #fff;
-    line-height: 50px;
-    text-align: center;
-    font-size: 26px;
-    border: 1px solid #000;
-    border-radius: 4px;
+.news-item .news-item__img {
+    width: 100%;
+}
+
+.news-item .news-item__descr {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 15px;
+    line-height: 16px;
 }
