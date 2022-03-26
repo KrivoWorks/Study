@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* auto-fill и auto-fit */
+/* Минимальное и максимальное значение элемента */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(100px, 300px) minmax(100px, 300px) minmax(100px, 300px);
+    /* первое значение минимальная высота или ширина элемента */
+    /* эти элементы div поэтому они займут ширину 300px */
+    /* сократим код */
+    grid-template-columns: repeat(3, minmax(100px, 300px));
+    grid-template-rows: repeat(3, minmax(100px, 300px));
+    /* такая запись у строки бывает редко */
+    /* чаще задаётся только минимальная высота */
+    grid-template-rows: repeat(3, minmax(100px, auto));
+    /* сейчас если добавить lorem в один элемент, высота установится автоматически */
+    grid-auto-rows: 200px;
+
+
+    /* auto-fill */
+    /* адаптивная сетка */
+    /* вместо количества колонок укажем auto-fill */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 300px));
+    /* количество колонок поместится столько, сколько уместится в ширину окна браузера */
+    gap: 10px;
+
+    /* изменим максимальную ширину до 1 фракции */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* если ширина будет больше 600px, отобразится 2 колонки, 900 - 3 */
+    /* если меньше 600 - 1 колонка */
+
+
+    /* auto-fit */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* auto-fill оставит место под будущие элементы */
+    /* auto-fit не будет оставлять место и растянется под всю ширину grid контейнера */
+
+
+    /* grid-auto-flow - указание куда будет расти контейнер */
+    /* по умолчанию - строка, неявный grid смешается в качестве строки */
+    grid-auto-flow: column;
+    /* но теперь изменится и порядок элементов (цифры) */
+
+    /* grid-auto-flow: dense; заполняет пустые места формируя компактный grid */
+}
+
+.grid-elem {
+    background-color: rgba(1, 1, 96, 1);
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 26px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
