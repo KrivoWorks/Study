@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* позиционирование треков */
+.grid-container {
+    display: grid;
+    /* линиям можно давать имена */
+    /* grid-template-columns: repeat(3, minmax(150px, 300px)); */
+    grid-template-columns: [col1-s] 150px [col2-s] 150px [col3-s] 150px;
+    /* grid-template-rows: repeat(3, minmax(100px, auto)); */
+    grid-template-rows: [row1-s] 150px [row2-s] 150px [row3-s] 150px [row4-s];
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+}
+
+.grid-elem {
+    background-color: rgba(1, 1, 96, 1);
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 26px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+#first {
+    grid-column-start: 1;
+    /* чтобы заданить колоночную линию начала элемента */
+    /* указывается число, начинается с 1 линии */
+    grid-column-end: 3;
+    /* на какой линии будет заканчиваться */
+
+    /* комбинированное свойство */
+    grid-column: 1 / 3; /* пробелы можно не ставить */
+
+    /* если дать имя линиям, 1/3 продолжит работать, у линий всегда есть индекс */
+    grid-column: col1-s/col2-s; /* обращаемся к линиям через имена */
+}
+
+#second {
+    grid-row-start: row3-s;
+    grid-row-end: 4;
+
+    /* комбинированное свойство */
+    grid-row: 3/4; /* 4 не обязательно указывать, тк элемент будет занимать только 1 трек */
+    grid-column-start: 2;
+}
+
+#third {
+    grid-row: row2-s/row4-s;
+    grid-column-start: col3-s;
+}
