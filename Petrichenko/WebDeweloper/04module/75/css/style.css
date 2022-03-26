@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Единицы измерения Fr */
+
+.grid-container {
+    width: 600px;
+    height: 600px;
+    /* если убрать высоту или ширину, регулироться через fr не будет */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* все колонки займут ровно по трети */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* средняя колонка будет занимать 50% ширины контейнера */
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /* чтобы не указывать много раз одно и тоже значение, есть repeat */
+    grid-template-columns: repeat(3, 1fr);
+    /* repeat (сколько раз повторить, что повторить) */
+    /* grid-template-columns: repeat(3, 50px 1fr) 20px; */
+    /* 3 раза повторятся колонки сначала 50px, потом 1fr, после них 1 колонка 20px */
+}
+
+.grid-elem {
+    /* height: 50px; */
+    background-color: rgba(1, 1, 96, 1);
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 26px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
