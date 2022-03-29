@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Выравнивание элементов внутри сетки */
+/* self - для себя, items - для всех */
+
+.grid-container {
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 300px));
+    grid-template-rows: repeat(3, minmax(150px, auto));
+    grid-auto-rows: minmax(150px, auto);
+    gap: 10px;
+    align-items: stretch;
+    /* align-items у grid контейнера указывает значение для всех align-self у элементов */
+    justify-items: stretch;
+    /* justify-items у grid контейнера указывает значение для всех justify-items у элементов */
+    
+    /* выравнивание по колоночной оси */
+    justify-content: center;
+    justify-content: space-between;
+    /* выравнивание по строчной оси */
+    align-content: center;
+    /* зададим высоту 1000px, и контент по вертикали выровнится по середине */
+    align-content: space-around;
+
+    
+    /* комбинированные свойства */
+    /* place-content: justify-content + align-content; */
+    place-content: space-around space-around;
+    /* place-items: justify-items + align-items; */
+    place-items: center center;
+}
+
+/* align-self выравнивание отдельного блока по поперечной оси*/
+#first {
+    align-self: stretch;
+    /* в отличии от флексов, названия указываются без flex */
+    /* если применить start - высота элемента уменьшится */
+    /* тк, у элемента есть line-height */
+    /* а по умолчанию align-self в позиции stretch */
+
+    /* чтобы каждому отдельному элементу не указывать это свойство */
+    /* у grid контейнера указывается align-items */
+
+    /* свойство регулирующее строчную ось */
+    justify-self: stretch;
+    /* если применить end ширина блока уменьшится до ширины содержимого */
+    /* тк нет фикстрованного значения */
+
+    /* чтобы каждому отдельному элементу не указывать это свойство */
+    /* у grid контейнера указывается justify-items */
+
+
+    /* комбинированные свойства */
+    /* place-self: justify-self + align-self; */
+    place-self: center end;
+}
+
+.grid-elem {
+    /* height: 50px; */
+    background-color: rgba(1, 1, 96, 1);
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 26px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
