@@ -16,3 +16,7 @@ closeElem.addEventListener('click', () => {
 overlay.addEventListener('click', () => {
 	menu.classList.remove('active');
 })
+
+window.addEventListener('scroll', () => {
+	menu.classList.remove('active');
+})
