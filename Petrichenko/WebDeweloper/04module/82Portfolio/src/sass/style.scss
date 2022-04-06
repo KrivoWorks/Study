@@ -20,7 +20,7 @@
     height: 3px;
     width: 60px;
     background-color: #ec8b42;
-    margin-top: 25px;
+    margin: 25px auto 0 auto;
 }
 
 @import 'blocks/promo';
@@ -29,3 +29,4 @@
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
 @import 'blocks/about';
+@import 'blocks/resume';

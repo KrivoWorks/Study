@@ -17,13 +17,13 @@
 	&__descr {
 		padding-top: 6px;
 		.divider {
-			margin-top: 4px;
+			margin: 0;
 		}
 	}
 	&__title {
 		position: relative;
 		padding: 1px 0 0 12px;
-		@include before_cicrle-second;
+		@include before_circle-second;
 	}
 	&__text {
 		margin-top: 20px;
@@ -43,7 +43,7 @@
 		&-circle { /* before нельзя применять к изображению */
 			position: relative;
 			padding: 15px 0 0 15px;
-			@include before_cicrle-second;
+			@include before_circle-second;
 			&:before {
 				top: 0;
 			}

@@ -1,4 +1,4 @@
-@mixin before_cicrle {
+@mixin before_circle {
 	&:before {
 		content: '';
 		position: absolute;
@@ -12,7 +12,7 @@
 	}
 }
 
-@mixin before_cicrle-second {
+@mixin before_circle-second {
 	&:before {
 		content: '';
 		position: absolute;
