@@ -32,7 +32,7 @@
         row-gap: 35px;
 		&-item {
 			display: grid;
-            grid-template: minmax(21px, auto) 14px / 200px 35px;
+            grid-template: minmax(21px, auto) 20px / 200px 35px;
 			justify-content: space-between;
 			align-content: space-between;
 		}
