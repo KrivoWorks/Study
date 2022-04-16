@@ -2,7 +2,8 @@
 	padding-top: 120px;
 	&__wrapper {
 		display: grid;
-		grid-template: repeat(2, minmax(270px, auto)) / repeat(4, 270px);
+		grid-template: repeat(2, minmax(270px, auto)) / repeat(auto-fit, 270px);
+		justify-content: center;
 		grid-auto-rows: minmax(270px, auto);
 		padding: 60px 10px 0 10px;
 		gap: 13px;
