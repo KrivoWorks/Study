@@ -71,11 +71,11 @@ function calc(a, b) {
 }
 console.log(calc(4, 7));
 
-// пример работы Retern, две команды консоли
+// пример работы Return, две команды консоли
 let numC = 10;
 function ret () {
     let numC = 20;
-    return numC; // retern вернул значение переменной 
+    return numC; // return вернул значение переменной 
 }
 console.log(numC); // команда вывела значение переменной до её возвращения
 const anotherNumC = ret(); // функция вернулась и поместилась а переменную
