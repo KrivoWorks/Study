@@ -1,0 +1,60 @@
+.test {
+    // связь объекта с анимацией
+    animation-name: exampleAnimation; 
+    // в названии можно использовать - или _
+    // нельзя использовать none
+
+    // время проигрывания анимации
+    animation-duration: 1s;
+
+    // сценарий развития анимации между ключевыми кадрами
+    animation-timing-function: linear;
+
+    // кол-во повторов ключевых кадров
+    animation-iteration-count: 1;
+    // infinite - бесконечное проигрывание анимации
+
+    // тип и направление проигрывания ключевых кадров
+    animation-direction: reverse;
+    // проигрывание в обратном порядке
+
+    // запускать или приостанавливать по определённому событию
+    &:hover {
+        animation-play-state: paused;
+
+        // сбросить анимацию при наведении
+        animation-name: none;
+    }
+
+    // задержка перед началом анимации
+    animation-delay: 1s;
+    // можно запускать с отрицательным значением
+
+    // какие свойства применятся после завершения анимации
+    animation-fill-mode: forwards;
+
+    // краткая запись анимации
+    animation: exampleAnimation 2s linear infinite alternate 0s forwards,
+    secondAnimation 2s linear infinite alternate 0s forwards;
+}
+
+@keyframes exampleAnimation {
+    0% {
+
+    }
+    50% {
+
+    }
+    100% {
+
+    }
+}
+
+@keyframes secondAnimation {
+    0% {
+
+    }
+    100% {
+
+    }
+}
